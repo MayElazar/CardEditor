@@ -1,0 +1,232 @@
+﻿body {
+    padding: 10px;
+    margin: 0 auto;
+}
+
+/*#imgCanvas {
+    /*height: 500px;
+    border: 1px solid black;
+    /*image-rendering:optimizeQuality;
+    image-rendering: optimizespeed;
+}*/
+
+/*#deleteImage {
+    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNDgiIGhlaWdodD0iNDgiCnZpZXdCb3g9IjAgMCA1MCA1MCIKc3R5bGU9IiBmaWxsOiMwMDAwMDA7Ij48cGF0aCBkPSJNIDIxIDAgQyAxOS4zNTQ1NDUgMCAxOCAxLjM1NDU0NTUgMTggMyBMIDE4IDUgTCAxMC4xNTYyNSA1IEEgMS4wMDAxIDEuMDAwMSAwIDAgMCA5LjgzNzg5MDYgNSBMIDggNSBBIDEuMDAwMSAxLjAwMDEgMCAxIDAgOCA3IEwgOS4wODU5Mzc1IDcgTCAxMi43MDUwNzggNDcuNSBMIDEyLjcwNzAzMSA0Ny41MDk3NjYgQyAxMi44NTcyNjIgNDguODYyMjMyIDEzLjk4MTg3MiA1MCAxNS40MDAzOTEgNTAgTCAzNC41OTk2MDkgNTAgQyAzNi4wMTgxMjggNTAgMzcuMTQyNjkxIDQ4Ljg2MjI2NiAzNy4yOTI5NjkgNDcuNTA5NzY2IEwgMzcuMjk0OTIyIDQ3LjUgTCA0MC45MTQwNjIgNyBMIDQyIDcgQSAxLjAwMDEgMS4wMDAxIDAgMSAwIDQyIDUgTCA0MC4xNzM4MjggNSBBIDEuMDAwMSAxLjAwMDEgMCAwIDAgMzkuODQxNzk3IDUgTCAzMiA1IEwgMzIgMyBDIDMyIDEuMzU0NTQ1NSAzMC42NDU0NTUgMCAyOSAwIEwgMjEgMCB6IE0gMjEgMiBMIDI5IDIgQyAyOS41NTQ1NDUgMiAzMCAyLjQ0NTQ1NDUgMzAgMyBMIDMwIDUgTCAyMCA1IEwgMjAgMyBDIDIwIDIuNDQ1NDU0NSAyMC40NDU0NTUgMiAyMSAyIHogTSAxMS4wOTM3NSA3IEwgMTguODMyMDMxIDcgQSAxLjAwMDEgMS4wMDAxIDAgMCAwIDE5LjE1ODIwMyA3IEwgMzAuODMyMDMxIDcgQSAxLjAwMDEgMS4wMDAxIDAgMCAwIDMxLjE1ODIwMyA3IEwgMzguOTA2MjUgNyBMIDM1LjMwNjY0MSA0Ny4yODkwNjIgQyAzNS4yNTY5MTggNDcuNzM2NTYzIDM0Ljk4MTA5MSA0OCAzNC41OTk2MDkgNDggTCAxNS40MDAzOTEgNDggQyAxNS4wMTg5MDkgNDggMTQuNzQzMDgyIDQ3LjczNjU2MyAxNC42OTMzNTkgNDcuMjg5MDYyIEwgMTEuMDkzNzUgNyB6IE0gMTguOTg0Mzc1IDkuOTg2MzI4MSBBIDEuMDAwMSAxLjAwMDEgMCAwIDAgMTggMTEgTCAxOCA0NCBBIDEuMDAwMSAxLjAwMDEgMCAxIDAgMjAgNDQgTCAyMCAxMSBBIDEuMDAwMSAxLjAwMDEgMCAwIDAgMTguOTg0Mzc1IDkuOTg2MzI4MSB6IE0gMjQuOTg0Mzc1IDkuOTg2MzI4MSBBIDEuMDAwMSAxLjAwMDEgMCAwIDAgMjQgMTEgTCAyNCA0NCBBIDEuMDAwMSAxLjAwMDEgMCAxIDAgMjYgNDQgTCAyNiAxMSBBIDEuMDAwMSAxLjAwMDEgMCAwIDAgMjQuOTg0Mzc1IDkuOTg2MzI4MSB6IE0gMzAuOTg0Mzc1IDkuOTg2MzI4MSBBIDEuMDAwMSAxLjAwMDEgMCAwIDAgMzAgMTEgTCAzMCA0NCBBIDEuMDAwMSAxLjAwMDEgMCAxIDAgMzIgNDQgTCAzMiAxMSBBIDEuMDAwMSAxLjAwMDEgMCAwIDAgMzAuOTg0Mzc1IDkuOTg2MzI4MSB6Ij48L3BhdGg+PC9zdmc+")
+}*/
+
+#stickers img{
+    height:50px;
+    width:auto;
+}
+
+#cardCanvas {
+    padding: 10px;
+    /*background-color: crimson;*/
+    background-image: url('../images/pngBG.png');
+    position: relative;
+    /* background-image: url('../images/pngBG.png');*/
+    width: 50vw;
+    height: 50vw;
+    overflow: hidden;
+    border:solid black;
+}
+
+#image-container {
+    background-color: blueviolet;
+    /*padding: 10px;*/
+    position: relative;
+}
+
+.resizer {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: black;
+    z-index: 2;
+}
+
+    .resizer.nw {
+        top: -1px;
+        left: -1px;
+        cursor: nw-resize;
+    }
+
+    .resizer.ne {
+        top: -1px;
+        right: -1px;
+        cursor: ne-resize;
+    }
+
+    .resizer.sw {
+        bottom: -1px;
+        left: -1px;
+        cursor: sw-resize;
+    }
+
+    .resizer.se {
+        bottom: -1px;
+        right: -1px;
+        cursor: se-resize;
+    }
+
+.TXTresizer {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: black;
+    z-index: 2;
+}
+
+    .TXTresizer.nw {
+        top: -1px;
+        left: -1px;
+        cursor: nw-resize;
+    }
+
+    .TXTresizer.ne {
+        top: -1px;
+        right: -1px;
+        cursor: ne-resize;
+    }
+
+    .TXTresizer.sw {
+        bottom: -1px;
+        left: -1px;
+        cursor: sw-resize;
+    }
+
+    .TXTresizer.se {
+        bottom: -1px;
+        right: -1px;
+        cursor: se-resize;
+    }
+
+.textAreaDiv {
+    position: absolute;
+}
+/*#cardCanvas #image-container {
+    height: 100%;
+    width: 100%;
+}*/
+/*#userImage {
+    display: block;
+}*/
+/*#image-container*/
+/*#userImage {
+    height: auto;
+    width: 100%;
+}*/
+#topTxtOnPic {
+    position: absolute;
+    /* letter-spacing: 10px;*/
+    font-size: 2vw;
+    font-family: Sans-Serif;
+    cursor: grabbing;
+    left: 50%;
+    top: 5%;
+}
+
+#lowerTxtOnPic {
+    position: absolute;
+    /* letter-spacing: 10px;*/
+    font-size: 2vw;
+    font-family: Sans-Serif;
+    cursor: grabbing;
+    left: 50%;
+    top: 85%;
+}
+
+/*הוספת קלאס להסתרת אלמנטים*/
+.hidden {
+    display: none;
+}
+
+textarea {
+    background-color: transparent;
+    /*  background: ;*/
+    /*border: solid blue;*/
+    border:none;
+    resize: none;
+    /* background-image: url('../images/icons8-checkmark-48.png');*/
+}
+
+
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: right;
+    outline: none;
+    font-size: 15px;
+}
+
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .active, .collapsible:hover {
+        background-color: #ccc;
+    }
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+    padding: 5px 18px 5px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+#myContentCanvas {
+    justify-content: space-between;
+    display: flex;
+}
+
+#proporties{
+    width:24vw;
+    height:auto;
+}
+
+.textAreaClass:hover{
+    border:solid black;
+   
+}
+
+#BackgroundProp img{
+    height:80px;
+    width:auto;
+}
+
+
+@media (max-width: 765px) {
+    #myContentCanvas {
+        justify-content: space-between;
+        display: grid;
+        flex-direction: row-reverse;
+    }
+
+    #proporties {
+        margin-top: 16px;
+        width: 50vw;
+        height: auto;
+        order: 2;
+        margin-bottom: 16px;
+    }
+
+    #cardCanvas {
+        
+        padding: 10px;
+        /* background-color: crimson; */
+        background-image: url(../images/pngBG.png);
+        position: relative;
+        /* background-image: url(../images/pngBG.png); */
+        width: 50vw;
+        height: 50vw;
+        overflow: hidden;
+        border: solid black;
+        order: 1;
+    }
+}
